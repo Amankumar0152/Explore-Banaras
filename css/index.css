@@ -1,0 +1,7 @@
+.footer a:hover i {
+    color: currentColor;
+    fill: currentColor;
+    }
+    .footer .nav-link:hover {
+    text-decoration: underline;
+    }
