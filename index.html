@@ -6,6 +6,7 @@
     <title>Explore Banaras</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/price.css">
+    <link rel="stylesheet" href="css/pop-up.css">
     <meta name="theme-color" content="cornflowerblue">
     <link rel="icon" href="preview-img/vns-round.png">
     <meta property="og:title" content="Explore Banaras With Anuj">
@@ -75,6 +76,16 @@
   <a href="https://www.varanasitouristguide.com/" class="alert-link">Click here</a> to visit the main site.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
+
+<!-- Popup Overlay -->
+<div id="popup-overlay" class="popup-overlay" onclick="closePopup()">
+  <div class="popup-box" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img src="preview-img/service-unavailable.webp" alt="Popup Image" class="popup-img">
+    <p>Online bookking not available! 🌱<br>For Direct Booking <a href="https://wa.me/918318898909">click here</a></p>
+  </div>
+</div>
+
 
 <!-- Languages  -->
 <section style="background-color: #343a40; padding: 20px; text-align: center; color: #ffffff;">
@@ -385,5 +396,7 @@
 </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+    <script src="js/pop-up.js"></script>
 </body>
 </html>
