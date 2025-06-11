@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Banaras</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/price.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/pop-up.css">
     <link rel="stylesheet" href="css/review.css">
     <meta name="theme-color" content="#FFC107">
@@ -73,13 +73,13 @@
 </div>
 
 <!-- Popup Overlay -->
-<div id="popup-overlay" class="popup-overlay" onclick="closePopup()">
+<!-- <div id="popup-overlay" class="popup-overlay" onclick="closePopup()">
   <div class="popup-box" onclick="event.stopPropagation()">
     <span class="close-btn" onclick="closePopup()">&times;</span>
     <img src="preview-img/service-unavailable.webp" alt="Popup Image" class="popup-img">
     <p>Online booking is not available right now! 🌱<br>For direct booking, <a href="https://wa.me/918318898909">click here</a>.</p>
   </div>
-</div>
+</div> -->
 
 
 <!-- Languages  -->
@@ -192,6 +192,87 @@
     }
   }
 </style>
+
+<div class="container-fluid p-0">
+        <div class="carousel-container">
+            <div id="responsiveCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="5"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="6"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="7"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="8"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="9"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="10"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="11"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="12"></button>
+                    <button type="button" data-bs-target="#responsiveCarousel" data-bs-slide-to="13"></button>
+                </div>
+                
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="background/south-korean-1.webp" class="d-block w-100" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/south-korean-2.webp" class="d-block w-100" alt="Second slide">
+                        <!-- <div class="carousel-caption d-none d-md-block">
+                            <h5>Second Slide Label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div> -->
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-1.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-2.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-3.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-4.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-5.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-6.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-7.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-8.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-9.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-10.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="background/explore-banaras-11.webp" class="d-block w-100" alt="Third slide">
+                    </div>
+                </div>
+                
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#responsiveCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#responsiveCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
 
 <!-- See more  -->

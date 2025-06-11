@@ -1,0 +1,50 @@
+.carousel-container {
+            padding: 0 15px;
+        }
+        
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .carousel-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 40px;
+            }
+            .carousel-inner {
+                border-radius: 10px;
+                overflow: hidden;
+            }
+        }
+        
+        /* Mobile styles - full width */
+        @media (max-width: 767.98px) {
+            .carousel-container {
+                padding: 0;
+            }
+        }
+        
+        /* Optional: Add some spacing around indicators and controls */
+        .carousel-indicators {
+            margin-bottom: 10px;
+        }
+        
+        .carousel-control-prev, .carousel-control-next {
+            width: 8%;
+        }
+        
+        /* Optional: Style for captions */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            padding: 10px 15px;
+            bottom: 20px;
+        }
+        
+        .carousel-caption h5 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+        
+        .carousel-caption p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
