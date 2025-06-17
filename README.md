@@ -1,0 +1,1 @@
+Your gateway to the spiritual and cultural heart of India. Discover the timeless charm of Varanasi, where ancient traditions meet vibrant modernity. From the sacred Ganga Aarti to the bustling lanes of Banarasi silk, every corner tells a story. Experience the magic of India's oldest city with a personalized touch.
