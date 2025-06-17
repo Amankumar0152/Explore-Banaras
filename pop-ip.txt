@@ -1,0 +1,57 @@
+
+    <!-- Footer -->
+    <footer class="footer" style="width: 100%; background: linear-gradient(to right, #000000, #1a1a1a); color: white; padding: 20px 0;">
+      <div class="container">
+      <div class="row align-items-center">
+        <!-- Navbar Links -->
+        <div class="col-md-8 mb-3 mb-md-0">
+        <ul class="nav justify-content-center justify-content-md-start">
+          <li class="nav-item">
+          <a class="nav-link text-white px-2" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-white px-2" href="#">Book a Tour</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-white px-2" href="#">Discover Varanasi</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-white px-2" href="#">Package Tour</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-white px-2" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-white px-2" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-white px-2" href="#">Terms & Condition</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-white px-2" href="#">Privacy Policy</a>
+          </li>
+        </ul>
+        </div>
+        <!-- Website Created By -->
+        <div class="col-md-4 text-center text-md-end">
+        <p class="mb-0" style="font-size: 0.9rem;"> Need a website? I'm just a message away! <a href="https://www.amankumarcoding.space/" target="_blank" class="text-warning text-decoration-none"> click here</a></p>
+        </div>
+      </div>
+      <!-- Social Media Links -->
+      <div class="text-center mt-3">
+        <p>Follow us on:</p>
+        <a href="https://www.instagram.com/francophoneanuj/" target="_blank" class="text-decoration-none mx-2" style="font-size: 1.5rem; color: #E1306C;">
+        <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://wa.me/918318898909" class="text-decoration-none mx-2" style="font-size: 1.5rem; color: #25D366;">
+        <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="#" class="text-decoration-none mx-2" style="font-size: 1.5rem; color: #ffffff;">
+        <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="text-decoration-none mx-2" style="font-size: 1.5rem; color: #1877F2;">
+        <i class="bi bi-facebook"></i>
+        </a>
+      </div>
+    </div>
+</footer>
