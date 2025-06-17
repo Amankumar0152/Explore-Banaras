@@ -1,0 +1,116 @@
+.temples-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #d4af37;
+    margin: 15px auto 0;
+}
+
+.temples-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.temple-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.temple-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.temple-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.temple-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.temple-card:hover .temple-img img {
+    transform: scale(1.05);
+}
+
+.temple-content {
+    padding: 20px;
+}
+
+.temple-content h3 {
+    color: #222;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.temple-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.temple-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.head-most {
+    background-color: #f8f8f8;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #d4af37;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.read-more {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #b38f2a;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .temples-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .temple-card {
+        max-width: 100%;
+    }
+}
