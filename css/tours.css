@@ -1,0 +1,105 @@
+/* File: tours.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.tours-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tours-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tours-description {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tour-card {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  align-items: center;
+}
+
+.tour-image {
+  width:35%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.tour-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.tour-content h3 {
+  margin-top: 0;
+}
+
+.tour-content ul {
+  padding-left: 1rem;
+  margin: 0;
+  list-style: none;
+}
+
+.tour-content li::before {
+  content: "\2022";
+  color: #214e70;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.tour-price {
+  min-width: 150px;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tour-price h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.tour-price button {
+  background-color: #214e70;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .tour-card {
+    flex-direction: column;
+  }
+  .tour-image {
+    width: 100%;
+    height: auto;
+  }
+  .tour-price {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
