@@ -1,43 +1,64 @@
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* PAGE */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f3f4f6;
+  background: #f3f3f3;
   color: #333;
+  min-height: 100vh;
+}
+
+.contact-hero {
+  background: linear-gradient(to right, #007BFF, #0056b3);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
 }
 
 .contact-section {
   padding: 40px 20px;
-  background: #ffffff;
+  background-color: inherit;
 }
 
 .contact-container {
   max-width: 650px;
-  background: #fff;
   margin: auto;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .contact-container h2 {
-  font-size: 28px;
   text-align: center;
-  margin-bottom: 10px;
-  color: #222;
+  margin-bottom: 8px;
+  font-size: 28px;
 }
 
 .intro-text {
   text-align: center;
   margin-bottom: 25px;
-  font-size: 16px;
+  font-size: 15px;
   color: #555;
 }
 
+/* FORM */
 .form-group {
   margin-bottom: 20px;
 }
@@ -48,16 +69,14 @@ label {
   margin-bottom: 8px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
+input,
 select,
 textarea {
   width: 100%;
   padding: 12px;
+  font-size: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 15px;
 }
 
 textarea {
@@ -75,19 +94,40 @@ button[type="submit"] {
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: 0.3s;
 }
 
 button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-@media (max-width: 600px) {
-  .contact-container {
-    padding: 20px;
-  }
+/* DARK MODE */
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
 
-  .contact-container h2 {
-    font-size: 24px;
-  }
+body.dark-mode .contact-container {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark-mode .intro-text {
+  color: #ccc;
+}
+
+body.dark-mode button[type="submit"] {
+  background-color: #0d6efd;
+}
+
+body.dark-mode button[type="submit"]:hover {
+  background-color: #084298;
 }

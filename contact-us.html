@@ -6,15 +6,20 @@
   <title>Contact Us - Varanasi Tours</title>
   <link rel="stylesheet" href="css/contact-us.css" />
 </head>
-<body>
+<body id="pageBody">
+  <section class="contact-hero">
+    <h1>Get in Touch</h1>
+    <p>
+      We'd love to help you explore Varanasi. Whether you're planning a trip, looking for a guide, or have a question — just fill the form below!
+    </p>
+  </section>
 
   <section class="contact-section">
     <div class="contact-container">
       <h2>Contact Us</h2>
       <p class="intro-text">Why are you contacting us? For inquiry or for tours? Please fill the form below.</p>
 
-      <form action="https://formspree.io/f/mjkraeab" method="POST" id="contactForm">
-        
+      <form action="https://formspree.io/f/mjkraeab" method="POST">
         <div class="form-group">
           <label for="name">Full Name*</label>
           <input type="text" id="name" name="name" required />
@@ -37,7 +42,7 @@
 
         <div class="form-group">
           <label for="purpose">Reason for Contact*</label>
-          <select id="purpose" name="purpose" required onchange="toggleTours()">
+          <select id="purpose" name="purpose" required>
             <option value="">-- Select --</option>
             <option value="Inquiry">General Inquiry</option>
             <option value="Tour">Tour</option>
@@ -60,24 +65,12 @@
           <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="Write your message in brief..."></textarea>
         </div>
 
-        <!-- Spam protection -->
         <input type="text" name="_gotcha" style="display:none" />
-
-        <!-- Redirect after submit (optional) -->
-        <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
-
         <button type="submit">Send Message</button>
       </form>
     </div>
   </section>
 
-  <script>
-    function toggleTours() {
-      const purpose = document.getElementById("purpose").value;
-      const tourOptions = document.getElementById("tourOptions");
-      tourOptions.style.display = (purpose === "Tour") ? "block" : "none";
-    }
-  </script>
-
+  <script src="js/contact-us.js"></script>
 </body>
 </html>
