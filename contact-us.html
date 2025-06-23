@@ -4,25 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact-Us</title>
-    <link rel="stylesheet" href="css/contact-us.css">
+    <link rel="stylesheet" href="js/contact-us.js">
 </head>
 <body>
-        <form action="action.php" class="form">
-            <input type="text" placeholder="Enter Name">
-            <input type="email" placeholder="Enter Email">
-            <input type="tel" placeholder="Enter Phone">
-            <input type="date" placeholder="Select Date">
+    <form action="https://formspree.io/f/xyzabcd" method="POST" id="contactForm">
+  <div class="form-group">
+    <label for="name">Full Name*</label>
+    <input type="text" id="name" name="name" required />
+  </div>
 
+  <div class="form-group">
+    <label for="email">Email Address*</label>
+    <input type="email" id="email" name="email" required />
+  </div>
 
-            <input type="search" placeholder="Search">
+  <div class="form-group">
+    <label for="phone">Phone Number*</label>
+    <input type="tel" id="phone" name="phone" required />
+    <label class="whatsapp-checkbox">
+      <input type="checkbox" name="whatsapp" value="Yes" />
+      This number is also available on WhatsApp
+    </label>
+  </div>
 
-            <select name="Tours" id="Tours">
-                <option value="Boat Ride Tour">Boat Ride Tour</option>
-                <option value="Evening Ganga Aarti">Evening Ganga Aarti</option>
-                <option value="Free walk Tour">Free Walk Tour</option>
-            </select>
+  <div class="form-group">
+    <label for="reason">Reason for Contact*</label>
+    <select id="reason" name="reason" required onchange="toggleOtherField()">
+      <option value="">-- Select an option --</option>
+      <option value="Heritage Walk">Heritage Walk</option>
+      <option value="Morning Boat Ride">Morning Boat Ride</option>
+      <option value="Evening Ganga Aarti">Evening Ganga Aarti</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
 
-            <input type="submit" value="Submit">
-        </form>
+  <div class="form-group" id="otherReasonContainer" style="display: none;">
+    <label for="otherReason">Please describe your reason (150–200 words):</label>
+    <textarea id="otherReason" name="otherReason" rows="5" maxlength="1500"></textarea>
+  </div>
+
+  <!-- Add a hidden field to stop spam -->
+  <input type="text" name="_gotcha" style="display:none" />
+  
+  <button type="submit">Send Message</button>
+</form>
+
 </body>
 </html>
