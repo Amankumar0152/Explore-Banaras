@@ -101,15 +101,6 @@ body {
   background-color: #0056b3;
 }
 
-/* Footer */
-footer {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #888;
-}
-
-
 /* WhatsApp Float */
 .whatsapp-float {
   position: fixed;
