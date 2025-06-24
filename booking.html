@@ -52,7 +52,7 @@
 
       <label>Message (optional)</label>
       <textarea id="message" rows="4" placeholder="Anything you want to tell us?"></textarea>
-
+      <button type="button" onclick="payAdvance()">💳 Pay ₹200 Now (Optional)</button>
       <button type="submit">Confirm Booking on WhatsApp</button>
     </form>
   </section>
@@ -92,5 +92,38 @@
 
     });
   </script>
+
+  <script>
+function payAdvance() {
+  const name = document.getElementById("name").value || "Guest";
+  const email = document.getElementById("email").value || "guest@example.com";
+  const phone = document.getElementById("phone").value || "9999999999";
+
+  const options = {
+    key: "rzp_test_Baj2CAk4BKuGkc", // 🔁 Replace with your Razorpay TEST key
+    amount: 20000, // ₹200 × 100 paise
+    currency: "INR",
+    name: "Explore Varanasi",
+    description: "Tour Advance Booking",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Varanasi_City_Seal.png/120px-Varanasi_City_Seal.png",
+    handler: function (response) {
+      alert("✅ Payment Successful! Transaction ID:\n" + response.razorpay_payment_id);
+      window.location.href = "thankyou.html";
+    },
+    prefill: {
+      name: name,
+      email: email,
+      contact: phone
+    },
+    theme: {
+      color: "#25d366"
+    }
+  };
+
+  const rzp = new Razorpay(options);
+  rzp.open();
+}
+</script>
+
 </body>
 </html>
