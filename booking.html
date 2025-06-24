@@ -5,6 +5,7 @@
   <title>Book Tour</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/confirm-booking.css" />
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
   <section class="form-container">
@@ -19,6 +20,30 @@
       <label>Your Phone (with country code)</label>
       <input type="tel" id="phone" placeholder="+91..." required>
 
+      <label>Select Tour Date</label>
+      <input type="date" id="date" required>
+
+      <label>Select Time</label>
+      <select id="time" required>
+        <option value="">-- Select Time --</option>
+        <option>6:00 AM – Morning Tour</option>
+        <option>10:00 AM</option>
+        <option>3:00 PM</option>
+        <option>5:30 PM – Ganga Aarti</option>
+        <option>7:00 PM</option>
+      </select>
+
+      <label>Number of People (Max 6)</label>
+      <select id="people" required>
+        <option value="">-- Select --</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+      </select>
+
       <label>Tour</label>
       <input type="text" id="tour" readonly>
 
@@ -32,9 +57,9 @@
     </form>
   </section>
 
-  <!-- Notice box -->
+  <!-- Bottom Note -->
   <div class="notice-box">
-    <strong>🔔 Note:</strong> To confirm your booking, we may ask for a small portion of the total price as an advance. This will be adjusted after your tour is complete.
+    <strong>🔔 Note:</strong> We may ask for a small advance payment to confirm your booking. This amount will be adjusted in the final tour payment.
   </div>
 
   <script>
@@ -44,19 +69,27 @@
 
     document.getElementById("bookingForm").addEventListener("submit", function(e) {
       e.preventDefault();
+
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const phone = document.getElementById("phone").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const people = document.getElementById("people").value;
       const tour = document.getElementById("tour").value;
       const price = document.getElementById("price").value;
       const msg = document.getElementById("message").value;
 
-      const whatsappNumber = "918318898909"; // your number here
-      const text = `*New Tour Booking*\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nTour: ${tour}\nPrice: $${price}\nMessage: ${msg}`;
+      const whatsappNumber = "918318898909"; // Replace with your number
+      const text = `*New Tour Booking*\n\n👤 Name: ${name}\n📧 Email: ${email}\n📱 Phone: ${phone}\n🗓️ Date: ${date}\n🕒 Time: ${time}\n👥 People: ${people}\n🎯 Tour: ${tour}\n💰 Price: $${price}\n📝 Message: ${msg}`;
 
       // alert("✅ Your booking message will open in WhatsApp. Please confirm there.");
       const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-      window.open(url, '_blank');
+      window.open(url, '_blank'); // Open WhatsApp
+      setTimeout(() => {
+        window.location.href = "thankyou.html";
+      }, 3000); // Redirect after 3 seconds
+
     });
   </script>
 </body>
