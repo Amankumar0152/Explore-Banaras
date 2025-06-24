@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Book Tour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/confirm-booking.css" />
 </head>
 <body>
@@ -25,19 +26,22 @@
       <input type="text" id="price" readonly>
 
       <label>Message (optional)</label>
-      <textarea id="message" rows="4"></textarea>
+      <textarea id="message" rows="4" placeholder="Anything you want to tell us?"></textarea>
 
       <button type="submit">Confirm Booking on WhatsApp</button>
     </form>
   </section>
 
+  <!-- Notice box -->
+  <div class="notice-box">
+    <strong>🔔 Note:</strong> To confirm your booking, we may ask for a small portion of the total price as an advance. This will be adjusted after your tour is complete.
+  </div>
+
   <script>
-    // Fill form from URL
     const params = new URLSearchParams(window.location.search);
     document.getElementById("tour").value = params.get("tour") || '';
     document.getElementById("price").value = params.get("price") || '';
 
-    // On form submit, send WhatsApp message
     document.getElementById("bookingForm").addEventListener("submit", function(e) {
       e.preventDefault();
       const name = document.getElementById("name").value;
@@ -47,10 +51,10 @@
       const price = document.getElementById("price").value;
       const msg = document.getElementById("message").value;
 
-      const whatsappNumber = "918318898909"; // Example: 918765432100
-
+      const whatsappNumber = "918318898909"; // your number here
       const text = `*New Tour Booking*\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nTour: ${tour}\nPrice: $${price}\nMessage: ${msg}`;
 
+      alert("✅ Your booking message will open in WhatsApp. Please confirm there.");
       const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
     });
