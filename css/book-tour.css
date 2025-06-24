@@ -1,3 +1,4 @@
+/* General Reset & Typography */
 * {
   margin: 0;
   padding: 0;
@@ -5,170 +6,105 @@
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
-  background: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
   color: #222;
+  line-height: 1.6;
   padding: 20px;
 }
 
-header {
+/* Header */
+.main-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-header h1 {
+.main-header h1 {
   font-size: 2.5rem;
-  color: #222;
+  color: #1a1a1a;
 }
 
-header p {
-  color: #555;
-  margin-top: 10px;
+.main-header p {
   font-size: 1.1rem;
+  color: #555;
+  margin-top: 8px;
 }
 
+/* Trust Note */
+.trust-note {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  background: #e0f7fa;
+  padding: 18px 24px;
+  border-left: 6px solid #00897b;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #004d40;
+}
+
+/* Tours Section */
 .tours {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .tours {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .tour-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
 }
 
 .tour-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
 }
 
 .tour-card h2 {
   margin-bottom: 10px;
-  color: #333;
+  color: #2c3e50;
+}
+
+.tour-card .price {
+  font-weight: bold;
+  color: #2980b9;
 }
 
 .tour-card p {
-  margin-bottom: 15px;
-  color: #666;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 .tour-card button {
+  margin-top: 16px;
   padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  background: #007bff;
-  color: white;
   border-radius: 8px;
-  cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .tour-card button:hover {
-  background: #0056b3;
+  background-color: #0056b3;
 }
 
+/* Footer */
 footer {
   margin-top: 60px;
   text-align: center;
+  font-size: 0.85rem;
   color: #888;
-  font-size: 0.9rem;
-}
-
-
-.form-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-container h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: #222;
-}
-
-.form-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form-container label {
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: #333;
-}
-
-.form-container input,
-.form-container textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 100%;
-}
-
-.form-container textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-.form-container button {
-  padding: 12px;
-  background-color: #25d366;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.form-container button:hover {
-  background-color: #128c7e;
-}
-
-/* Optimized css from  here */
-.main-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.main-header h1 {
-  font-size: 2.2rem;
-  color: #111;
-}
-
-.main-header p {
-  font-size: 1rem;
-  color: #555;
-  margin-top: 5px;
-}
-
-.trust-note {
-  background-color: #e8f5e9;
-  border-left: 5px solid #4caf50;
-  padding: 15px 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  color: #2e7d32;
-}
-
-.price {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.tour-card p {
-  line-height: 1.5;
-  color: #444;
 }
