@@ -54,7 +54,7 @@
       const whatsappNumber = "918318898909"; // your number here
       const text = `*New Tour Booking*\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nTour: ${tour}\nPrice: $${price}\nMessage: ${msg}`;
 
-      alert("✅ Your booking message will open in WhatsApp. Please confirm there.");
+      // alert("✅ Your booking message will open in WhatsApp. Please confirm there.");
       const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
     });
