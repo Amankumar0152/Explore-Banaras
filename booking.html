@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Tour</title>
+  <link rel="stylesheet" href="css/book-tour.css" />
+</head>
+<body>
+  <section class="form-container">
+    <h2>Tour Booking Form</h2>
+    <form id="bookingForm">
+      <label>Your Name</label>
+      <input type="text" id="name" required>
+
+      <label>Your Email</label>
+      <input type="email" id="email" required>
+
+      <label>Your Phone (with country code)</label>
+      <input type="tel" id="phone" placeholder="+91..." required>
+
+      <label>Tour</label>
+      <input type="text" id="tour" readonly>
+
+      <label>Price (USD)</label>
+      <input type="text" id="price" readonly>
+
+      <label>Message (optional)</label>
+      <textarea id="message" rows="4"></textarea>
+
+      <button type="submit">Confirm Booking on WhatsApp</button>
+    </form>
+  </section>
+
+  <script>
+    // Fill form from URL
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("tour").value = params.get("tour") || '';
+    document.getElementById("price").value = params.get("price") || '';
+
+    // On form submit, send WhatsApp message
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const tour = document.getElementById("tour").value;
+      const price = document.getElementById("price").value;
+      const msg = document.getElementById("message").value;
+
+      const whatsappNumber = "919565194075"; // Example: 918765432100
+
+      const text = `*New Tour Booking*\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nTour: ${tour}\nPrice: $${price}\nMessage: ${msg}`;
+
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>

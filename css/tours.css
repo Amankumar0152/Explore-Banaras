@@ -80,6 +80,14 @@ body {
   font-size: 1.5rem;
   margin: 0.5rem 0;
 }
+.tour-price button a{
+  text-decoration: none;
+  color: white;
+}
+.tour-price button a:hover{
+  color: orangered;
+  text-decoration: underline;
+}
 
 .tour-price button {
   background-color: #214e70;
