@@ -108,3 +108,22 @@ footer {
   font-size: 0.85rem;
   color: #888;
 }
+
+
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whatsapp-float img {
+  width: 52px;
+  height: 52px;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover img {
+  transform: scale(1.1);
+}
