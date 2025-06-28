@@ -84,18 +84,17 @@ body {
   text-decoration: none;
   color: white;
 }
-.tour-price button a:hover{
-  color: orangered;
-  text-decoration: underline;
-}
 
 .tour-price button {
-  background-color: #214e70;
+  background-color: cornflowerblue;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   cursor: pointer;
+}
+.tour-price button:hover {
+  background-color: #FFC107;
 }
 
 @media (max-width: 768px) {
