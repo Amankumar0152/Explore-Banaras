@@ -105,6 +105,13 @@ body {
 .whatsapp:hover {
     background-color: #128C7E;
 }
+
+/* Contact Details */
+.contact-details {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 10px;
+}
+
 /* FORM */
 .form-group {
   margin-bottom: 20px;
