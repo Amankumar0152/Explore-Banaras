@@ -41,21 +41,21 @@ fetch('/components/footer.html')
     document.getElementById('footer-placeholder').innerHTML = data;
   });
 
-// Load Cards
-// fetch('/cards/food.html')
-//   .then(response => response.text())
-//   .then(data => {
-//     document.getElementById('food-card').innerHTML = data;
-//   });
+// Load Cards (ONLY card content, not full pages)
+fetch('/cards/food.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('food-card').innerHTML = data;
+  });
 
-// fetch('/cards/temples.html')
-//   .then(response => response.text())
-//   .then(data => {
-//     document.getElementById('temples-card').innerHTML = data;
-//   });
+fetch('/cards/varanasi-temples.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('temples-card').innerHTML = data;
+  });
 
-// fetch('/cards/tours.html')
-//   .then(response => response.text())
-//   .then(data => {
-//     document.getElementById('tours-card').innerHTML = data;
-//   });
+fetch('/cards/varanasi-ghats.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('ghats-card').innerHTML = data;
+  });
