@@ -42,20 +42,20 @@ fetch('/components/footer.html')
   });
 
 // Load Cards
-fetch('/cards/food.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('food-card').innerHTML = data;
-  });
+// fetch('/cards/food.html')
+//   .then(response => response.text())
+//   .then(data => {
+//     document.getElementById('food-card').innerHTML = data;
+//   });
 
-fetch('/cards/temples.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('temples-card').innerHTML = data;
-  });
+// fetch('/cards/temples.html')
+//   .then(response => response.text())
+//   .then(data => {
+//     document.getElementById('temples-card').innerHTML = data;
+//   });
 
-fetch('/cards/tours.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('tours-card').innerHTML = data;
-  });
+// fetch('/cards/tours.html')
+//   .then(response => response.text())
+//   .then(data => {
+//     document.getElementById('tours-card').innerHTML = data;
+//   });
