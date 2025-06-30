@@ -112,6 +112,25 @@ body {
   padding: 10px;
 }
 
+.contact-details h1{
+  text-align: center;
+}
+.contact-details p {
+  font-size: 16px;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+}
+
+@media (max-width:768px){
+  .contact-details h1{
+    text-align: start;
+  }
+  .contact-details p{
+    text-align: start;
+  }
+}
+
 /* FORM */
 .form-group {
   margin-bottom: 20px;
