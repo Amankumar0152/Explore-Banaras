@@ -14,7 +14,7 @@
     border-radius: 10px;
     padding: 20px;
     width: 90%;
-    max-width: 400px;
+    max-width: 700px;
     text-align: center;
     position: relative;
     animation: popFade 0.3s ease-in-out;
@@ -23,7 +23,7 @@
 
   .popup-img {
     width: 100%;
-    max-width: 250px;
+    max-width: 100%;
     border-radius: 8px;
     margin-bottom: 15px;
   }
