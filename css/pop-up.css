@@ -33,11 +33,11 @@
     top: 10px; right: 15px;
     font-size: 24px;
     cursor: pointer;
-    color: #888;
+    color:black;
   }
 
   .close-btn:hover {
-    color: #000;
+    color: red;
   }
 
   @keyframes popFade {
