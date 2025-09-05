@@ -1,0 +1,64 @@
+.best-time-section {
+  margin: 20px auto;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+}
+
+.best-time-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.best-time-box h1 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.best-time-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.best-time-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Smooth expand/collapse container */
+.more-wrap {
+  height: 0;                 /* start collapsed */
+  overflow: hidden;          /* hide content while collapsed */
+  transition: height 350ms ease;
+}
+
+/* Show/hide the dots depending on state */
+.dots { display: inline; }
+[data-readmore][data-open="true"] .dots { display: none; }
+
+.read-more-btn {
+  margin-top: 12px;
+  background-color: #5a2d82;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #402060;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .more-wrap { transition: none; }
+}

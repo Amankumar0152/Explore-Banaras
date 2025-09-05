@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/tours.css">
     <link rel="stylesheet" href="css/visit/vns.css">
+    <link rel="stylesheet" href="css/visit/read-more.css">
     <meta name="theme-color" content="#FFC107">
     <link rel="icon" href="preview-img/vns-round.png">
     <!-- Open Graph Meta Tags -->
@@ -109,21 +110,31 @@
 </div> -->
 
 <section class="best-time-section">
-  <div class="best-time-box">
+  <div class="best-time-box" data-readmore>
     <h1>Shri Kashi Vishwanath Temple – The Heart of Varanasi</h1>
-    <img src="https://raw.githubusercontent.com/Amankumar0152/my-images/refs/heads/main/vishwanath-temple.webp" alt="varanasi Ghats" class="best-time-img">
-    
+
+    <img src="https://raw.githubusercontent.com/Amankumar0152/my-images/refs/heads/main/vishwanath-temple.webp"
+         alt="Kashi Vishwanath Temple" class="best-time-img">
+
     <p>
-      The Kashi Vishwanath Temple, also known as the Golden Temple of Varanasi, is one of the most sacred temples in India dedicated to Lord Shiva. Situated on the banks of the holy Ganga, this temple is not just a place of worship but the spiritual soul of Banaras. 
-      <span class="dots">...</span>
-      <span class="more-text">
-        Thousands of devotees and pilgrims visit every day to seek blessings, perform rituals, and feel the divine energy of Mahadev. The temple’s golden spire, ancient architecture, and powerful aura make it a must-visit for anyone traveling to Varanasi.
-      </span>
+      The Kashi Vishwanath Temple, also known as the Golden Temple of Varanasi, is one of the most sacred temples in India dedicated to Lord Shiva. Situated on the banks of the holy Ganga, this temple is not just a place of worship but the spiritual soul of Banaras.
+      <span class="dots" aria-hidden="true">…</span>
     </p>
 
-    <button class="read-more-btn">Read More</button>
+    <!-- Put the extra content in its own wrapper for smooth height animation -->
+    <div class="more-wrap" id="kvn-more">
+      <p>
+        Thousands of devotees and pilgrims visit every day to seek blessings, perform rituals, and feel the divine energy of Mahadev.
+        The temple’s golden spire, ancient architecture, and powerful aura make it a must-visit for anyone traveling to Varanasi.
+      </p>
+    </div>
+    
+    <button class="read-more-btn" data-readmore-toggle aria-controls="kvn-more" aria-expanded="false">
+      Read More
+    </button>
   </div>
 </section>
+
 
 
 <section class="best-time-section">
