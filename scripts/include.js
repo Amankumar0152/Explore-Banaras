@@ -59,3 +59,14 @@ fetch('/cards/varanasi-ghats.html')
   .then(data => {
     document.getElementById('ghats-card').innerHTML = data;
   });
+
+fetch('/cards/contents.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('contents-card').innerHTML = data;
+  });
+fetch('/cards/contents2.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('contents2-card').innerHTML = data;
+  });
