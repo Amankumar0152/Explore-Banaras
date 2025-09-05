@@ -1,64 +1,48 @@
-.best-time-section {
-  margin: 20px auto;
-  max-width: 800px;
-  font-family: Arial, sans-serif;
+:root{
+  --rm-btn-bg: cornflowerblue;      /* change this to your preferred color */
+  --rm-btn-hover: rgb(86, 114, 165);          /* change hover color */
+  --rm-btn-color: #ffffff;
+  --rm-card-bg: #ffffff;
+  --rm-card-shadow: rgba(0,0,0,0.08);
 }
 
+.best-time-section { margin: 20px auto; max-width: 900px; font-family: Arial, sans-serif; }
 .best-time-box {
-  background: #fff;
+  background: var(--rm-card-bg);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px var(--rm-card-shadow);
   margin-bottom: 20px;
 }
+.best-time-box h1 { font-size: 22px; margin-bottom: 12px; color: #222; }
+.best-time-img { width:100%; height:auto; border-radius:8px; margin-bottom:12px; }
+.best-time-box p { font-size:16px; line-height:1.6; color:#444; }
 
-.best-time-box h1 {
-  font-size: 22px;
-  margin-bottom: 12px;
-  color: #333;
+/* smooth height animation wrapper — start collapsed */
+.vtg-more-wrap {
+  height: 0;
+  overflow: hidden;
+  transition: height 360ms cubic-bezier(.22,.9,.3,1);
 }
 
-.best-time-img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
+/* the dots */
+.vtg-dots { display: inline; }
 
-.best-time-box p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* Smooth expand/collapse container */
-.more-wrap {
-  height: 0;                 /* start collapsed */
-  overflow: hidden;          /* hide content while collapsed */
-  transition: height 350ms ease;
-}
-
-/* Show/hide the dots depending on state */
-.dots { display: inline; }
-[data-readmore][data-open="true"] .dots { display: none; }
-
-.read-more-btn {
+/* button styles — scoped with a unique class to avoid overrides */
+.vtg-readmore-btn {
   margin-top: 12px;
-  background-color: cornflowerblue;
-  color: #fff;
+  background-color: var(--rm-btn-bg);
+  color: var(--rm-btn-color);
   border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 9px 14px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
-  transition: background 0.3s ease;
+  transition: background-color 180ms ease, transform 180ms ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  -webkit-appearance: none;
 }
+.vtg-readmore-btn:hover { background-color: var(--rm-btn-hover); transform: translateY(-1px); }
+.vtg-readmore-btn:focus { outline: 3px solid rgba(90,45,130,0.15); }
 
-.read-more-btn:hover {
-  background-color: crimson;
-}
-
-/* Respect users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .more-wrap { transition: none; }
-}
+/* If another rule still overrides the button, you can increase specificity or use !important */
