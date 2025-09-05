@@ -44,7 +44,7 @@
 
 .read-more-btn {
   margin-top: 12px;
-  background-color: #5a2d82;
+  background-color: cornflowerblue;
   color: #fff;
   border: none;
   padding: 8px 14px;
@@ -55,7 +55,7 @@
 }
 
 .read-more-btn:hover {
-  background-color: #402060;
+  background-color: crimson;
 }
 
 /* Respect users who prefer reduced motion */
