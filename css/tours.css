@@ -96,7 +96,7 @@ body {
   cursor: pointer;
 }
 .tour-price button:hover {
-  background-color: #FFC107;
+  background-color: orangered;
 }
 
 @media (max-width: 768px) {
