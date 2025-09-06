@@ -25,7 +25,7 @@ function sendToWhatsApp() {
 📝 Message: ${messageBox}`;
 
   // Replace with your WhatsApp number
-  let url = "https://wa.me/YOURNUMBER?text=" + message;
+  let url = "https://wa.me/919565194075?text=" + message;
   window.open(url, '_blank').focus();
 }
 
