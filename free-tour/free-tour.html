@@ -50,21 +50,37 @@
     <input type="text" id="whatsapp" placeholder="WhatsApp Number" required>
     
     <!-- Date Field -->
-    <div class="form-field" onclick="document.getElementById('date').showPicker()">
+    <div class="form-field">
       <label for="date">📅 Select Date</label>
       <input type="date" id="date" required>
     </div>
 
-    <!-- Time Field -->
-    <div class="form-field" onclick="document.getElementById('time').showPicker()">
+    <!-- Time Dropdown -->
+    <div class="form-field">
       <label for="time">⏰ Select Time</label>
-      <input type="time" id="time" required>
+      <select id="time" required>
+        <option value="">-- Choose a time --</option>
+        <option>07:00 AM</option>
+        <option>09:00 AM</option>
+        <option>11:00 AM</option>
+        <option>02:00 PM</option>
+        <option>04:00 PM</option>
+        <option>06:00 PM</option>
+      </select>
     </div>
 
-    <!-- People Field -->
-    <div class="form-field" onclick="document.getElementById('people').focus()">
-      <label for="people">👥 Number of People (max 4)</label>
-      <input type="number" id="people" min="1" max="4" value="1" required>
+    <!-- People Dropdown -->
+    <div class="form-field">
+      <label for="people">👥 Number of People (max 6)</label>
+      <select id="people" required>
+        <option value="">-- Select people --</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+      </select>
     </div>
 
     <textarea id="message" placeholder="Your Message (optional)"></textarea>

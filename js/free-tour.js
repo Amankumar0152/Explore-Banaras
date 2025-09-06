@@ -8,8 +8,8 @@ function sendToWhatsApp() {
   let people = document.getElementById("people").value;
   let messageBox = document.getElementById("message").value;
 
-  if (people > 4) {
-    alert("❌ Maximum 4 people allowed per booking.");
+  if (!time || !people) {
+    alert("⏰ Please select a time and number of people.");
     return;
   }
 

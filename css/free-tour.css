@@ -204,3 +204,19 @@ textarea:focus {
   box-shadow: 0 0 6px rgba(62,142,65,0.4);
   outline: none;
 }
+
+/* existing styles above... */
+
+.form-field select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.form-field select:focus {
+  border-color: #3e8e41;
+  box-shadow: 0 0 6px rgba(62,142,65,0.4);
+  outline: none;
+}
