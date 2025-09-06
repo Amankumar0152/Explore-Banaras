@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Walk Tour</title>
+  <link rel="stylesheet" href="../css/free-tour.css">
+</head>
+<body>
+
+  <header>
+    🌿 Free Walk Tour
+    <span class="badge">100% Free</span>
+  </header>
+
+  <section class="timeline">
+
+    <div class="timeline-item fade-in">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>📍 Meeting Point: St. Thomas Church</h3>
+        <p>Our journey begins at the historic <b>Saint Thomas Church</b>, a landmark filled with charm and stories. Perfect gathering spot to start exploring together.</p>
+        <a href="https://maps.google.com/?q=St.Thomas+Church" target="_blank">📍 View on Google Maps</a>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-in delay-1">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>🙏 Brihaspati Temple</h3>
+        <p>Next, we’ll visit the <b>Brihaspati Temple</b>, dedicated to Lord Shiva. Discover its unique traditions, spiritual vibes, and cultural significance.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item fade-in delay-2">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>🌳 Local Heritage Walk</h3>
+        <p>Experience the <b>hidden streets, vibrant markets, and local culture</b> as we stroll through the heritage trail. A perfect blend of history and daily life.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <form id="tourForm" class="fade-in delay-3">
+    <h2>Register for Free Walk Tour</h2>
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="text" id="whatsapp" placeholder="WhatsApp Number" required>
+    
+    <!-- Date Field -->
+    <div class="form-field" onclick="document.getElementById('date').showPicker()">
+      <label for="date">📅 Select Date</label>
+      <input type="date" id="date" required>
+    </div>
+
+    <!-- Time Field -->
+    <div class="form-field" onclick="document.getElementById('time').showPicker()">
+      <label for="time">⏰ Select Time</label>
+      <input type="time" id="time" required>
+    </div>
+
+    <!-- People Field -->
+    <div class="form-field" onclick="document.getElementById('people').focus()">
+      <label for="people">👥 Number of People (max 4)</label>
+      <input type="number" id="people" min="1" max="4" value="1" required>
+    </div>
+
+    <textarea id="message" placeholder="Your Message (optional)"></textarea>
+    <button type="button" onclick="sendToWhatsApp()">Send to WhatsApp</button>
+  </form>
+
+  <script src="../js/free-tour.js"></script>
+</body>
+</html>
