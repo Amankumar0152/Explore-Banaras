@@ -1,0 +1,114 @@
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.gallery-title {
+  text-align: center;
+  margin-bottom: 30px;
+  /* color: #333; */
+}
+
+/* Mobile Slider Layout */
+.gallery-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+  gap: 15px;
+  padding-bottom: 15px;
+}
+
+.gallery-item {
+  scroll-snap-align: start;
+  flex: 0 0 calc(100% - 30px);
+  /* background: white; */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(58, 57, 57, 0.1);
+}
+
+.item-image-wrap {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.item-content {
+  padding: 15px;
+}
+
+.item-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  /* color: #222; */
+}
+
+.item-text {
+  margin: 0;
+  line-height: 1.5;
+  /* color: #555; */
+}
+
+/* Text truncation for mobile */
+.mobile-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.read-toggle {
+  background: none;
+  border: none;
+  color: cornflowerblue;
+  padding: 5px 0;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.read-toggle:hover {
+  text-decoration: underline;
+}
+
+/* Hide scrollbar but keep functionality */
+.gallery-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Desktop Grid Layout */
+@media (min-width: 768px) {
+  .gallery-slider {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      overflow-x: visible;
+      scroll-snap-type: none;
+      padding-bottom: 0;
+  }
+  
+  .gallery-item {
+      flex: none;
+      width: auto;
+  }
+  
+  .mobile-truncate {
+      display: block;
+      -webkit-line-clamp: unset;
+  }
+  
+  .mobile-only {
+      display: none !important;
+  }
+}
