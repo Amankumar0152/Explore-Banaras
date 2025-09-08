@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/tours.css">
     <link rel="stylesheet" href="css/village-tour.css">
+    <link rel="stylesheet" href="css/loader.css">
     <meta name="theme-color" content="#ff6f61">
     <link rel="icon" href="image/pop-up/vns-round.png">
     <!-- Open Graph Meta Tags -->
@@ -96,6 +97,28 @@
         </div>
      </div>
 </nav>
+
+<div id="section">
+    <button onclick="loadData()">Load Data</button>
+    <div id="section-loader" style="display: none;">Loading...</div>
+    <div id="data"></div>
+</div>
+
+<script>
+function loadData() {
+    document.getElementById('section-loader').style.display = 'block';
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('data').innerHTML = `<h3>${data.title}</h3><p>${data.body}</p>`;
+        })
+        .finally(() => {
+            document.getElementById('section-loader').style.display = 'none';
+        });
+}
+</script>
+
+
 
 <!-- Popup Overlay -->
 <div id="popup-overlay" class="popup-overlay" onclick="closePopup()">
