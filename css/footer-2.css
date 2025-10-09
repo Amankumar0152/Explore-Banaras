@@ -16,7 +16,6 @@
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
 }
 
 .link-group {
