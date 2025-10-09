@@ -1,0 +1,224 @@
+/* Ensure you include Font Awesome or similar library for the clock/arrow icons */
+
+/* --- General Section Styling --- */
+.tours-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif; /* Use your site's font */
+}
+
+.tours-section h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* --- Mobile Carousel Setup --- */
+.tours-carousel-wrapper {
+    /* Ensures the carousel doesn't spill out of the section padding */
+    overflow-x: hidden;
+}
+
+.tours-carousel {
+    display: flex; /* Key for horizontal layout */
+    gap: 20px;
+    padding-bottom: 15px; /* Space for the shadow/scroll bar */
+    
+    /* Enable horizontal scrolling for mobile */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Makes cards snap into place */
+    
+    /* Hide the default scrollbar on most browsers */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.tours-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+
+/* --- Individual Tour Card Styling --- */
+.tour-card {
+    /* Critical for mobile: fixed width and shrinks only when necessary */
+    flex: 0 0 85%; /* 85% width on small screens to show a hint of the next card */
+    max-width: 350px; /* Limits size on slightly larger mobile screens */
+    
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    scroll-snap-align: start; /* Snap point for the carousel */
+    border: 1px solid #eee; /* Light border similar to your image */
+}
+
+.tour-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Fixed height for consistent look */
+    overflow: hidden;
+}
+
+.tour-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Badges (10% off, Featured) */
+.badge {
+    position: absolute;
+    top: 15px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+}
+
+.discount {
+    left: 15px;
+    background-color: #ff5722; /* Orange color for discount */
+}
+
+.featured {
+    left: 15px;
+    /* Adjust position if discount is present, otherwise move it left: 15px */
+    top: 50px; 
+    background-color: #e91e63; /* Pink/Red color for featured */
+}
+.discount + .featured {
+    top: 50px; /* Position featured badge below discount */
+}
+
+/* --- Tour Details Content --- */
+.tour-details {
+    padding: 15px;
+}
+
+.duration {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.duration i {
+    margin-right: 5px;
+    color: #ff9800; /* Accent color for icon */
+}
+
+.days {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.tour-title {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.tour-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Footer (Price and View All) */
+.tour-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #eee; /* The separator line */
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+}
+
+.current-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    margin-right: 8px;
+}
+
+.original-price {
+    font-size: 0.9em;
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.view-all {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+
+/* --- Mobile Navigation Arrows Styling (Visible only on Mobile) --- */
+.tour-navigation-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nav-arrow {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    color: #ff9800;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nav-arrow:hover {
+    background: #fff3e0;
+}
+
+
+/* --- Media Query for PC (Tablet and Desktop) Optimization --- */
+@media (min-width: 768px) {
+    
+    /* Disable mobile-specific carousel features on PC */
+    .tours-carousel {
+        display: grid;
+        /* PC Grid: Show 3 cards in a row */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px;
+        overflow-x: visible; /* Disable scrolling */
+        padding-bottom: 0;
+    }
+    
+    /* If you want 4 cards on very large screens: */
+    /* @media (min-width: 1024px) {
+        .tours-carousel {
+            grid-template-columns: repeat(4, 1fr); 
+        }
+    } */
+
+    /* Reset card width for grid */
+    .tour-card {
+        flex: unset;
+        width: 100%; /* Take up the full grid column space */
+        max-width: unset;
+    }
+
+    /* Hide mobile navigation arrows on PC */
+    .tour-navigation-mobile {
+        display: none;
+    }
+}
