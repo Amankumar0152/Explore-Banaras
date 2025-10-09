@@ -1,0 +1,125 @@
+/* --- Global Reset/Base Styles (Important for clean design) --- */
+.attractions-section * {
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Section Container Styling --- */
+.attractions-section {
+    padding: 20px;
+    max-width: 1200px; /* Limits max width on large screens */
+    margin: 40px auto; /* Centers the section horizontally */
+    font-family: Arial, sans-serif; /* Use your site's font */
+}
+
+.attractions-section h2 {
+    color: #cc5500; /* Use your accent color */
+    font-size: 2em; /* Larger title */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+
+/* --- Grid Layout (Mobile-First: Stacks by default) --- */
+.attractions-grid {
+    display: grid;
+    /* On mobile, cards stack one on top of the other (1 column) */
+    grid-template-columns: 1fr; 
+    gap: 30px; /* Space between cards */
+}
+
+
+/* --- Individual Attraction Card Styling --- */
+.attraction-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Important for keeping image corners rounded */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow like your index page */
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover for PC */
+}
+
+/* --- Image Styling --- */
+.attraction-image-container {
+    /* Ensures the image is the top half of the card */
+    width: 100%; 
+    height: 200px; /* Fixed height for consistent look */
+    overflow: hidden;
+}
+
+.attraction-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.attraction-card:hover .attraction-image {
+    transform: scale(1.05); /* Zoom in effect on hover */
+}
+
+/* --- Content Styling --- */
+.attraction-content {
+    padding: 15px;
+}
+
+.attraction-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.attraction-text {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.attraction-link {
+    display: inline-block;
+    color: #cc5500; /* Use your accent color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.attraction-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Media Query for PC (Tablet and Desktop) Optimization --- */
+@media (min-width: 768px) {
+    
+    .attractions-section {
+        padding: 20px 40px; /* More padding on sides for PC */
+    }
+
+    .attractions-grid {
+        /* On PC, display 3 columns */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    
+    /* You can adjust the image height for PC if you want taller images */
+    .attraction-image-container {
+         height: 250px; 
+    }
+}
+
+/* --- Optional: Media Query for even smaller screens (Small Mobile) --- */
+@media (max-width: 480px) {
+    .attractions-section h2 {
+        font-size: 1.6em; 
+    }
+}
