@@ -5,10 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banaras Home - Tours in Varanasi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar/navbar.css">
 </head>
 <body>
     <!-- Header & Navigation -->
-    
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Explore<span>Varanasi</span></h1>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li>
+                    <a href="#">Book a Tour <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Varanasi Morning Boat Ride</a></li>
+                        <li><a href="#">Evening Ganga Aarti</a></li>
+                        <li><a href="#">Varanasi Sightseeing</a></li>
+                        <li><a href="#">Varanasi Museums & Exhibitions</a></li>
+                        <li><a href="#">Sarnath Tour</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Tours in Varanasi <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Heritage City Walk</a></li>
+                        <li><a href="#">Sight Seeing Tour</a></li>
+                        <li><a href="#">Varanasi Walk</a></li>
+                        <li><a href="#">Food Walk</a></li>
+                        <li><a href="#">Free Walk Tour</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Walk Tour <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Heritage City Walk</a></li>
+                        <li><a href="#">Sight Seeing Tour</a></li>
+                        <li><a href="#">Varanasi Walk</a></li>
+                        <li><a href="#">Food Walk</a></li>
+                        <li><a href="#">Free Walk Tour</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Free Tour <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Free Walk Tour Along the Ghats</a></li>
+                        <li><a href="#">Free Village Tour</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -160,45 +217,6 @@
         </div>
     </section>
 
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-        
-        // Dropdown toggle for mobile
-        const dropdownParents = document.querySelectorAll('.nav-links li');
-        
-        dropdownParents.forEach(parent => {
-            if (parent.querySelector('.dropdown')) {
-                parent.addEventListener('click', (e) => {
-                    if (window.innerWidth <= 992) {
-                        e.preventDefault();
-                        const dropdown = parent.querySelector('.dropdown');
-                        dropdown.classList.toggle('active');
-                    }
-                });
-            }
-        });
-        
-        // Close menu when clicking outside on mobile
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 992) {
-                if (!e.target.closest('.navbar')) {
-                    menuToggle.classList.remove('active');
-                    navLinks.classList.remove('active');
-                    
-                    // Close all dropdowns
-                    document.querySelectorAll('.dropdown').forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
-                }
-            }
-        });
-    </script>
+    <script src="js/navbar.js"></script>
 </body>
 </html>
